@@ -1,0 +1,125 @@
+/* Reset margins, padding, and set box-sizing to border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background color, width, and height for html and body */
+html, body {
+    background: rgb(152, 199, 152);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#main {
+    width: 80%;
+    height: 80%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#header {
+    width: 100%;
+    height: 80px;
+    background: rgb(12, 72, 12);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ele {
+    color: white;
+    display: flex;
+    margin: 5px;
+    align-items: center;
+}
+
+.box {
+    text-align: center;
+    margin: 10px;
+    background: white;
+    color: rgb(96, 179, 96);
+    font-size: 23px;
+    font-weight: 600;
+    border-radius: 2px;
+    height: 30px;
+    width: 30px;
+}
+
+#bottum {
+    width: 100%;
+    height: calc(100% - 80px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.bubble {
+    margin: 6px;
+    height: 45px;
+    width: 45px;
+    color: white;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50%;
+    background: rgb(85, 148, 89);
+}
+
+.bubble:hover {
+    background: rgb(45, 93, 48);
+    cursor: pointer;
+}
+
+#score {
+    width: 50px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bubble {
+        height: 35px;
+        width: 35px;
+        font-size: 18px;
+    }
+
+    .box {
+        font-size: 20px;
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .ele {
+        margin: 10px 0;
+    }
+
+    .bubble {
+        height: 30px;
+        width: 30px;
+        font-size: 16px;
+    }
+
+    .box {
+        font-size: 18px;
+        height: 20px;
+        width: 20px;
+    }
+}
